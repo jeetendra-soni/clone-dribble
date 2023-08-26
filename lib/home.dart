@@ -22,13 +22,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[800],
+      backgroundColor: Colors.black87,
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.blueGrey,), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.blueGrey,), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.blueGrey,), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.blueGrey,), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home, ), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.message,), label: "Message"),
+          BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: "Account"),
         ],
       ),
       body: SafeArea(
@@ -57,7 +56,7 @@ class _HomeState extends State<Home> {
                         Text(
                           "$formattedDate",
                           style: TextStyle(
-                              color: Colors.blue[200],
+                              color: Colors.white54,
                               fontWeight: FontWeight.bold,
                               fontSize: 18
                           ),
@@ -68,7 +67,7 @@ class _HomeState extends State<Home> {
                        padding: EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.blue[600]
+                          color: Color(0XFFF083663)
                         ),
                         child: Icon(Icons.notifications, color: Colors.white,))
                     ],
@@ -79,14 +78,22 @@ class _HomeState extends State<Home> {
                   Container(
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(12)
+                      color: Color(0XFFECF2FF),
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.white38,
+                          spreadRadius: 10.0,
+                          offset: Offset.infinite,
+                          blurRadius: 10
+                        )
+                      ]
                     ),
                     child: Row(
                       children: const [
-                        Icon(Icons.search, color: Colors.white,),
+                        Icon(Icons.search, color: Colors.black87,),
                         SizedBox(width: 10),
-                        Text("Search", style: TextStyle(color: Colors.white),)
+                        Text("Search", style: TextStyle(color: Colors.black87),)
                       ],
                     ),
                   ),
@@ -137,7 +144,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   padding: EdgeInsets.only(top: 25, left: 25, right: 25, bottom: 10),
                   decoration: BoxDecoration(
-                      color: Colors.grey[300],
+                      color: Color(0XFFF083663),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(50),
                         topRight: Radius.circular(50),
@@ -150,8 +157,8 @@ class _HomeState extends State<Home> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("Exercises", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz))
+                            Text("Exercises", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22),),
+                            IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz, color: Colors.white,))
                           ],
                         ),
                         
@@ -159,10 +166,10 @@ class _HomeState extends State<Home> {
                         Expanded(
                           child: ListView(
                             children: [
-                              Exercises(icon: Icons.speaker_group, title: "Speaking Skill", subtitle: "15 minutes per day",),
-                              Exercises(icon: Icons.read_more, title: "Reading Skill", subtitle: "Read 5 pages per day",),
-                              Exercises(icon: Icons.edit_note, title: "Writing Skill", subtitle: "Write 5 pages per day",),
-                              Exercises(icon: Icons.handshake_outlined, title: "Meetings", subtitle: "Meet 5 new person per day",),
+                              Exercises(icon: Icons.speaker_group, title: "Speaking Skill", subtitle: "15 minutes per day", color: Colors.deepOrangeAccent,),
+                              Exercises(icon: Icons.read_more, title: "Reading Skill", subtitle: "Read 5 pages per day", color: Colors.green,),
+                              Exercises(icon: Icons.edit_note, title: "Writing Skill", subtitle: "Write 5 pages per day", color: Colors.lightBlueAccent,),
+                              Exercises(icon: Icons.handshake_outlined, title: "Meetings", subtitle: "Meet 5 new person per day", color: Colors.lightGreen,),
 
 
                             ],

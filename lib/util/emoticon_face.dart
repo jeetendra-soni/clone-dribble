@@ -18,7 +18,7 @@ class _EmoticonFaceState extends State<EmoticonFace> {
           Container(
             padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
-              color: Colors.blue[600],
+              color: Color(0XFFF083663),
               borderRadius: BorderRadius.circular(12)
             ),
             child: Center(
